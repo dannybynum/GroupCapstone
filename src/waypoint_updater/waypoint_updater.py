@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+
 #################################################
 # File/Revision History
 # Modified by Danny Bynum, Aug-4 at 11am ET
 ##################################################
 
-#!/usr/bin/env python
-#test modification
 import rospy
 from geometry_msgs.msg import PoseStamped
 from styx_msgs.msg import Lane, Waypoint
