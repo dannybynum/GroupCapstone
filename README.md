@@ -1,5 +1,5 @@
 [//]: # (Image References)
-
+[image4]: ./writeup/SimLagFixed.PNG "Sim Lag Fixed Screenshot"
 [image3]: ./writeup/Veerback-Aug5.PNG "Veerback screenshot"
 [image2]: ./writeup/Veeroff-Aug5.PNG "Veeroff screenshot"
 [image1]: ./writeup/Waypoints_In_Front_Of_Car.PNG "Simulator Screenshot with code updates from first walk-thru video"
@@ -13,6 +13,12 @@ From Self-Driving Car Engineer Nanodegree Program
 If we make changes away from what was recommended in the video walk-thru then suggest we list them here so that team members can easily follow the code and changes or additions we may make from the suggestions.
 
 Aug-5, I removed the "fuel_capacity" from the files twist_controller.py and dbw_node.py -- this was not used and decided it would help me learn by making a small modification from suggestions in the video
+
+
+## Update Aug-8.  Thanks to Bob I found out the "bug" was really just a lag issue - changed number of waypoints to 25 and reduced rospy update frequency to 31 and works now!!  
+
+Very minor code change made to waypoint_updater.py - and now works in the simulator - screenshot below!  Now on to work on the traffic light recognition part and will tie that back into the waypoint_updater later (possibly this weekend)
+![alt text][image4]
 
 
 ## Update Aug-5.  Updated the dbw_node.py and twist_controller.py files under /twist_controller

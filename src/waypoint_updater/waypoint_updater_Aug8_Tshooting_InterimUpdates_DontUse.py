@@ -2,7 +2,8 @@
 
 #################################################
 # File/Revision History
-# Modified by Danny Bynum, Aug-4 at 11am ET
+# Original by Danny Bynum, Aug-4 at 11am ET (code reused from video walk-thru)
+# Updated by Danny Bynum, Aug-7
 ##################################################
 
 import rospy
@@ -29,7 +30,9 @@ as well as to verify your TL classifier.
 TODO (for Yousuf and Aaron): Stopline location for each traffic light.
 '''
 
-LOOKAHEAD_WPS = 25 # Number of waypoints we will publish. You can change this number
+LOOKAHEAD_WPS = 200 # Number of waypoints we will publish. You can change this number
+
+TSHOOT_COUNT = 0
 
 '''
 From walk-thru video - Waypoint Updater Partial Walkthrough
@@ -57,21 +60,26 @@ class WaypointUpdater(object):
         self.waypoints_2d = None
         self.waypoint_tree = None
 
+        #self.loop(TSHOOT_COUNT)
         self.loop()
         #rospy.spin()
     
     #added from walkthru
+    #def loop(self,TSHOOT_COUNT):
     def loop(self):
-        rate = rospy.Rate(31)
+        rate = rospy.Rate(50)
         while not rospy.is_shutdown():
-            if self.pose and self.base_waypoints:
+            if self.pose and self.base_waypoints:  #T-shoot Aug-7, not sure why you need base_waypoints to be there
+            #if self.pose:
                 #Get closest waypoint
-                closest_waypoint_idx = self.get_closest_waypoint_id()
+                #TSHOOT_COUNT +=1
+                #print ("Inside_loop ", TSHOOT_COUNT)
+                closest_waypoint_idx = self.get_closest_waypoint_idx()
                 self.publish_waypoints(closest_waypoint_idx)
             rate.sleep()
     
     #added from walk_thru        
-    def get_closest_waypoint_id(self):
+    def get_closest_waypoint_idx(self):
         x = self.pose.pose.position.x
         y = self.pose.pose.position.y
         closest_idx = self.waypoint_tree.query([x,y], 1)[1]
@@ -98,11 +106,14 @@ class WaypointUpdater(object):
     def publish_waypoints(self, closest_idx):
         lane = Lane()
         #making the header the same - comment that maybe this isn't even needed
-        lane.header = self.base_waypoints.header
-        
+        #lane.header = self.base_waypoints.header
+
+        closest_idx = self.get_closest_waypoint_idx()
+        farthest_idx = closest_idx + LOOKAHEAD_WPS
+                
         # using Python slicing to publish the points in front of us - 
         # starting with the index we determined plus the number of points we want to use
-        lane.waypoints = self.base_waypoints.waypoints[closest_idx:closest_idx + LOOKAHEAD_WPS]
+        lane.waypoints = self.base_waypoints.waypoints[closest_idx:farthest_idx]
         self.final_waypoints_pub.publish(lane)
 
     def pose_cb(self, msg):
