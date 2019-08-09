@@ -12,7 +12,14 @@ From Self-Driving Car Engineer Nanodegree Program
 ## Notes regarding changes from suggestions in walk-thru
 If we make changes away from what was recommended in the video walk-thru then suggest we list them here so that team members can easily follow the code and changes or additions we may make from the suggestions.
 
-Aug-5, I removed the "fuel_capacity" from the files twist_controller.py and dbw_node.py -- this was not used and decided it would help me learn by making a small modification from suggestions in the video
+## Update Aug-8 10 PT - merged ROS folder and added traffic classifier 
+
+* Classifier and trained inference model for simulation environment added. 
+* Arranged folder structure follow Udacity provided template.
+* Copied waypoint_updater_Aug8_Fullwalkthru_NotWorking.py to waypoint_updater.py and launch folder
+* A few minor changes to tl_detector.py to match newly added code
+* Added traffic light classifier, freeze inference model and verified in local PC(TF-GPU 1.4) 
+* Real site model will take another day to be trained and merged.
 
 
 ## Update Aug-8.  Thanks to Bob I found out the "bug" was really just a lag issue - changed number of waypoints to 25 and reduced rospy update frequency to 31 and works now!!  
@@ -22,6 +29,7 @@ Very minor code change made to waypoint_updater.py - and now works in the simula
 
 
 ## Update Aug-5.  Updated the dbw_node.py and twist_controller.py files under /twist_controller
+Aug-5, I removed the "fuel_capacity" from the files twist_controller.py and dbw_node.py -- this was not used and decided it would help me learn by making a small modification from suggestions in the video
 
 Now when I unclick the "manual" button the car accelerates but it veers off of the line pretty quickly - see picture below
 ![alt text][image2]

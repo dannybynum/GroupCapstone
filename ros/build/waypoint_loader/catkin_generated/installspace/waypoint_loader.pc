@@ -1,0 +1,8 @@
+prefix=/home/demo/disk512/SynologyDrive/Udacity-SD-nano/GroupCapstone/ros/install
+
+Name: waypoint_loader
+Description: Description of waypoint_loader
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/demo/disk512/SynologyDrive/Udacity-SD-nano/GroupCapstone/ros/install/lib 
+Requires: 
