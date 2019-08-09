@@ -15,6 +15,8 @@ From Self-Driving Car Engineer Nanodegree Program
 ## Notes regarding changes from suggestions in walk-thru
 If we make changes away from what was recommended in the video walk-thru then suggest we list them here so that team members can easily follow the code and changes or additions we may make from the suggestions.
 
+Aug-5, I removed the "fuel_capacity" from the files twist_controller.py and dbw_node.py -- this was not used and decided it would help me learn by making a small modification from suggestions in the video
+
 
 ## Update Aug-9, 615pm ET - Car now stops at traffic lights (in simulator) 
 
@@ -44,7 +46,7 @@ Very minor code change made to waypoint_updater.py - and now works in the simula
 
 
 ## Update Aug-5.  Updated the dbw_node.py and twist_controller.py files under /twist_controller
-Aug-5, I removed the "fuel_capacity" from the files twist_controller.py and dbw_node.py -- this was not used and decided it would help me learn by making a small modification from suggestions in the video
+
 
 Now when I unclick the "manual" button the car accelerates but it veers off of the line pretty quickly - see picture below
 ![alt text][image2]
