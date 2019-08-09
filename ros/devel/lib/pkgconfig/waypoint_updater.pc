@@ -1,0 +1,8 @@
+prefix=/home/demo/disk512/SynologyDrive/Udacity-SD-nano/GroupCapstone/ros/devel
+
+Name: waypoint_updater
+Description: Description of waypoint_updater
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/demo/disk512/SynologyDrive/Udacity-SD-nano/GroupCapstone/ros/devel/lib 
+Requires: 
