@@ -1,0 +1,8 @@
+prefix=/home/demo/disk512/SynologyDrive/Udacity-SD-nano/GroupCapstone/ros/devel
+
+Name: styx_msgs
+Description: Description of styx_msgs
+Version: 0.0.0
+Cflags: -I/home/demo/disk512/SynologyDrive/Udacity-SD-nano/GroupCapstone/ros/devel/include
+Libs: -L/home/demo/disk512/SynologyDrive/Udacity-SD-nano/GroupCapstone/ros/devel/lib 
+Requires: 
