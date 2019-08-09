@@ -1,8 +1,11 @@
 [//]: # (Image References)
+[image5]: ./writeup/SimStopsAtRedLights.PNG "Sim Car Now Stops at Red Lights"
 [image4]: ./writeup/SimLagFixed.PNG "Sim Lag Fixed Screenshot"
 [image3]: ./writeup/Veerback-Aug5.PNG "Veerback screenshot"
 [image2]: ./writeup/Veeroff-Aug5.PNG "Veeroff screenshot"
 [image1]: ./writeup/Waypoints_In_Front_Of_Car.PNG "Simulator Screenshot with code updates from first walk-thru video"
+
+
 
 # Group Capstone Project
 From Self-Driving Car Engineer Nanodegree Program
@@ -11,6 +14,18 @@ From Self-Driving Car Engineer Nanodegree Program
 
 ## Notes regarding changes from suggestions in walk-thru
 If we make changes away from what was recommended in the video walk-thru then suggest we list them here so that team members can easily follow the code and changes or additions we may make from the suggestions.
+
+
+## Update Aug-9, 615pm ET - Car now stops at traffic lights (in simulator) 
+
+It Works (see image below)!!!! I finally fixed the error(s) in `waypoint_updater.py` and now the car stops at traffic lights.  I tested using a modified `tl_detector.py` file on my local copy so that only uses the ground-truth information (does not use the classifier) -- I did this because processing images in the sim is very laggy with my setup.  In the repo this file is `tl_detector_danny_testonly.py`.
+
+Bob - please update to the latest waypoint_updater.py on your system and let me know if it works end2end now for you when using the traffic classifier.
+
+I haven't checked out anything on the second track yet but I plan to do that this weekend (Sunday) and maybe we'll be ready to submit by then.
+
+![alt text][image5]
+
 
 ## Update Aug-8 10 PT - merged ROS folder and added traffic classifier 
 
