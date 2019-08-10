@@ -4,9 +4,12 @@ import tensorflow as tf
 import datetime
 
 class TLClassifier(object):
-    def __init__(self):
+    def __init__(self, real_mode):
         #TODO load classifier
-        MODELFILE = r'light_classification/model/frozen_inference_graph.pb'
+        if real_mode:
+            MODELFILE = r'light_classification/model/real/frozen_inference_graph.pb'
+        else:
+            MODELFILE = r'light_classification/model/sim/frozen_inference_graph.pb'
         self.graph = tf.Graph()
         self.threshold = .5
         with self.graph.as_default():
@@ -23,7 +26,7 @@ class TLClassifier(object):
                 'num_detections:0')
 
         self.sess = tf.Session(graph=self.graph)
-        #print('end classifier init')
+        print('real mode is:', real_mode)
 
     def get_classification(self, image):
         """Determines the color of the traffic light in the image
@@ -47,7 +50,7 @@ class TLClassifier(object):
         scores = np.squeeze(scores)
         classes = np.squeeze(classes).astype(np.int32)
         #print('found classes: ', classes[0])
-
+   
         if scores[0] > self.threshold:
             if classes[0] == 1:
                 print('1:green')

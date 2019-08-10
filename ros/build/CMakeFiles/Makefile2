@@ -1995,6 +1995,24 @@ clean: styx_msgs/CMakeFiles/styx_msgs_genpy.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory twist_controller
+
+# Convenience name for "all" pass in the directory.
+twist_controller/all:
+
+.PHONY : twist_controller/all
+
+# Convenience name for "clean" pass in the directory.
+twist_controller/clean:
+
+.PHONY : twist_controller/clean
+
+# Convenience name for "preinstall" pass in the directory.
+twist_controller/preinstall:
+
+.PHONY : twist_controller/preinstall
+
+#=============================================================================
 # Directory level rules for directory waypoint_follower
 
 # Convenience name for "all" pass in the directory.

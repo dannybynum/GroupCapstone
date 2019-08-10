@@ -40,11 +40,11 @@ class TLDetector(object):
 
         config_string = rospy.get_param("/traffic_light_config")
         self.config = yaml.load(config_string)
-
+        self.real_mode = rospy.get_param("real")   # read mode 
         self.upcoming_red_light_pub = rospy.Publisher('/traffic_waypoint', Int32, queue_size=1)
 
         self.bridge = CvBridge()
-        self.light_classifier = TLClassifier()
+        self.light_classifier = TLClassifier(self.real_mode)  # pass in sim or real mode
         self.listener = tf.TransformListener()
 
         self.state = TrafficLight.UNKNOWN
