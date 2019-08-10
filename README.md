@@ -17,6 +17,13 @@ If we make changes away from what was recommended in the video walk-thru then su
 
 Aug-5, I removed the "fuel_capacity" from the files twist_controller.py and dbw_node.py -- this was not used and decided it would help me learn by making a small modification from suggestions in the video
 
+## Update Aug-9, 720 pm PT - add initial real traffic light inference model support
+
+This verion is based on the lastest from origin.  
+* real classifier model change when launch with roslaunch launch/site.launch. Added param in tl_detector launch file
+* twist_controller launch folder and makefile
+
+In simulation mode this works ok for run(green light) and stop(red light). For real mode this has not been verified yet. So please don't run site launch yet.
 
 ## Update Aug-9, 615pm ET - Car now stops at traffic lights (in simulator) 
 
