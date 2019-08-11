@@ -25,6 +25,9 @@ From Self-Driving Car Engineer Nanodegree Program
 
 * I did a code inspection to make sure I believe the car will reset its PID controllers when run on the real course - added a note to the twist_controller.py file to indicate where this is covered.
 
+* **We're ready to submit from my perspective** - once Bob confirms that the code works in real mode and that he is ready to submit then I will do the submission.  For other members (Minbo and Rakshith) I am currently not able to include you on the team submission, but please see email I sent and respond to that letting me know progress and contribution/plans.
+
+
 ## Update Aug-9, 720 pm PT - add initial real traffic light inference model support
 
 This verion is based on the lastest from origin.  
