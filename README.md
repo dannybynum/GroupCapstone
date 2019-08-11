@@ -17,7 +17,8 @@ From Self-Driving Car Engineer Nanodegree Program
 * I tested that the "velocity" parameter is respected/followed -- changed the launch\waypoint_loader.launch file velocity parameter as follows `<param name="velocity" value="10" />  <!-- DWB Aug-11 change to 10 and 100 for testing purposes -->`
 * I tested out the 2nd track in the simulator the "test lot" by swaping which of these lines was commented out in the launch\waypoint_loader.launch file.  
 ```     <!--<param name="path" value="$(find styx)../../../data/wp_yaw_const.csv" /> -->
-        <param name="path" value="$(find styx)../../../data/churchlot_with_cars.csv" />```
+        <param name="path" value="$(find styx)../../../data/churchlot_with_cars.csv" /> ```
+
 * I did a code inspection to make sure I believe the car will reset its PID controllers when run on the real course - added a note to the twist_controller.py file to indicate where this is covered.
 
 ## Update Aug-9, 720 pm PT - add initial real traffic light inference model support
