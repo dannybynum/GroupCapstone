@@ -40,7 +40,9 @@ class Controller(object):
     def control(self, current_vel, dbw_enabled, linear_vel, angular_vel):
         # TODO: Change the arg, kwarg list to suit your needs
         # Return throttle, brake, steer
-        
+
+        # Danny Note on Aug-11 - this is just using the code from the video walkthru, and
+        # I believe this will properly reset the the PID controller if dbw_enabled is toggled during real testing
         if not dbw_enabled:
             self.throttle_controller.reset()
             return 0., 0., 0.

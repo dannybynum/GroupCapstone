@@ -4,6 +4,7 @@
 # File/Revision History
 # Modified by Danny Bynum, Aug-4 at 11am ET
 # Updated by Danny Bynum, Aug-9 at 522pm ET
+# Updated DB Aug-11 at 7am ET
 ##################################################
 
 import rospy
@@ -195,13 +196,6 @@ class WaypointUpdater(object):
             dist += dl(waypoints[wp1].pose.pose.position, waypoints[i].pose.pose.position)
             wp1 = i
         return dist
-
-    #FIXME Added on Aug-9 from looking at other code, don't fully understand why you need this
-    #but there is the comment overall in the lesson that you need to make sure to limit the 
-    #top speed to the value set in the parameter file for parameter velocity
-
-    def current_velocity_cb(self,msg):
-        self.current_velocity = msg.twist.linear.x
 
 
 if __name__ == '__main__':
