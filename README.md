@@ -10,6 +10,11 @@
 # Group Capstone Project
 From Self-Driving Car Engineer Nanodegree Program
 
+## Three team members as follows:
+Team Lead:  Danny Bynum: email witheld
+Member:  Bob Ding:  email witheld
+Member:  Minbo Tan:  email witheld
+
 ---
 
 
