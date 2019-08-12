@@ -49,7 +49,7 @@ class TLClassifier(object):
         boxes = np.squeeze(boxes)
         scores = np.squeeze(scores)
         classes = np.squeeze(classes).astype(np.int32)
-        #print('found classes: ', classes[0])
+        print('traffic light classes: ', classes[0])
    
         if scores[0] > self.threshold:
             if classes[0] == 1:
