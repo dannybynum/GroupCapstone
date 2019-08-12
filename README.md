@@ -11,11 +11,11 @@
 From Self-Driving Car Engineer Nanodegree Program
 
 ## Three team members as follows:
-Team Lead:  Danny Bynum: email witheld
+Team Lead:  Danny Bynum: email DannyBynum at gmail
 
-Member:  Bob Ding:  email witheld
+Member:  Bob Ding:  email dingxinmin.bob at gmail
 
-Member:  Minbo Tan:  email witheld
+Member:  Minbo Tan:  email sdjtdxpopov12 at gmail
 
 ---
 
