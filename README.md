@@ -12,6 +12,10 @@ From Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+
+## Update Aug-12, bob, 12 am PT - updates on real model 
+* updated the classifier portion for real traffic light detection. Now it can detect both red/green light with the provided bag files. 
+
 ## Update Aug-11, DWB, 7am ET - updates on testing and minor code changes
 * made minor change in waypoint_updater.py (deleted some code I was using for tshooting)
 
