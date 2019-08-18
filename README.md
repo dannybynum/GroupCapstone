@@ -1,4 +1,6 @@
 [//]: # (Image References)
+
+[image6]: ./writeup/RosBagFeedbackSubmission1.PNG "Screenshot of playing rosbag file"
 [image5]: ./writeup/SimStopsAtRedLights.PNG "Sim Car Now Stops at Red Lights"
 [image4]: ./writeup/SimLagFixed.PNG "Sim Lag Fixed Screenshot"
 [image3]: ./writeup/Veerback-Aug5.PNG "Veerback screenshot"
@@ -19,6 +21,26 @@ Member:  Minbo Tan:  email sdjtdxpopov12 at gmail
 
 ---
 
+
+
+## Update Aug-18, Danny, 9am ET - Viewing Feedback From Submission
+
+Took a screenshot below showing a few rostopics being echo'd along with the playback of the bag file we received for feedback.  All the screenshot confirms is that they did enable "drive by wire(dbw)" and that our pedal command stayed at 0.0 ->which is as expected based on the video feedback.
+
+Here are a few useful steps and commands that I used to play this feedback.
+(1) Open workspace and navigate to "/opt" directory since workspace directory has file size limit
+(2) download the files directly to the workspace using `wget https://udacity-selfdrivingcar.s3.amazonaws.com/reviews/1937917_1565909714.zip`
+(3) unzip the files with `unzip 1937917_1565909714.zip`
+(4) still within workspace open a terminal and type `roscore` and enter, and type `rosbag play -l /opt/XYZ.bag`  (full path to bag file)
+(5) Then open up the desktop (click button go to desktop)
+(6) Open a terminal/terminator and type `rviz` and hit enter.
+(7) Once rviz opens go to its menu-bar and select "File-> Open Config" and navigate to /home/workspace/default.rviz
+(8) Now echo some topics - go to directory /home/workspace/CarND-Capstone/ros and type `source /devel/setup.sh` (do this for any new terminal window opened)
+(9) Now type `rostopic echo /vehicle/dbw_enabled` and repeat step8 in another window and then type `rostopic echo /vehicle/throttle_cmd`
+
+
+
+![alt text][image6]
 
 ## Update Aug-12, bob, 12 am PT - updates on real model 
 * updated the classifier portion for real traffic light detection. Now it can detect both red/green light with the provided bag files. 
